@@ -1,0 +1,34 @@
+<div *ngIf="isLoading" class="loader">Loading...</div>
+<div *ngIf="!isLoading">
+    <span class="p-input-icon-left">
+      <i class="pi pi-search"></i>
+      <input pInputText type="text" (input)="applyGlobalFilter($event, dt)" placeholder="Search...">
+    </span>
+  
+    <p-table #dt [value]="pricingRecords" [paginator]="true" [rows]="10" 
+             sortMode="multiple" [globalFilterFields]="globalFilterFields">
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="storeId">Store ID <p-sortIcon field="storeId"></p-sortIcon></th>
+          <th pSortableColumn="sku">SKU <p-sortIcon field="sku"></p-sortIcon></th>
+          <th pSortableColumn="productName">Product Name <p-sortIcon field="productName"></p-sortIcon></th>
+          <th pSortableColumn="price">Price <p-sortIcon field="price"></p-sortIcon></th>
+          <th pSortableColumn="date">Date <p-sortIcon field="date"></p-sortIcon></th>
+          <th>Action</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-pricingRecord>
+        <tr>
+          <td>{{ pricingRecord.storeId }}</td>
+          <td>{{ pricingRecord.sku }}</td>
+          <td>{{ pricingRecord.productName }}</td>
+          <td>{{ pricingRecord.price }}</td>
+          <td>{{ pricingRecord.date | date }}</td>
+          <td>
+            <button pButton type="button" icon="pi pi-pencil" (click)="onEdit(pricingRecord.id)"></button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  

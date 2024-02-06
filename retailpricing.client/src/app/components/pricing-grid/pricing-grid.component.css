@@ -1,0 +1,23 @@
+:host {
+    display: block;
+    padding: 1rem;
+  }
+  
+  p-table {
+    width: 100%;
+  }
+  
+  button {
+    margin-left: 0.5rem;
+  }
+
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 20px;
+    color: #007bff;
+  }
+  
+  

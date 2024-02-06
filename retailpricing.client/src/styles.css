@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Reset some basic elements */
+body, h1, h2, h3, p, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header and Navigation Styles */
+  .app-header {
+    background-color: #005f73;
+    color: #ffffff;
+    padding: 1rem 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    padding: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover, .nav-links a.active {
+    color: #ffddd2;
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    padding: 2rem 0;
+  }
+  
+  /* Add your custom styles below */
+  
